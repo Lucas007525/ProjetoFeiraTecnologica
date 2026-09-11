@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        Pesquisa - Sebos Londrina
+    </title>
+
+    <!-- CSS -->
+    <link
+        rel="stylesheet"
+        href="../static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         CABEÇALHO
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span>📚</span>
+
+            <h1>
+                Sebos Londrina
+            </h1>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="/">
+                Início
+            </a>
+
+            <a href="/#sebos">
+                Sebos
+            </a>
+
+            <a href="/#avaliacoes">
+                Avaliações
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTEÚDO PRINCIPAL
+    ====================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             RESULTADO DA PESQUISA
+        ====================================== -->
+
+        <section class="hero">
+
+            <div class="hero-content">
+
+                <span class="hero-tag">
+                    PESQUISA
+                </span>
+
+
+                <h2>
+
+                    Resultado para:
+
+                    <strong>
+                        {{ termo }}
+                    </strong>
+
+                </h2>
+
+
+                <p>
+                    Confira os sebos encontrados
+                    em nossa plataforma.
+                </p>
+
+
+                <!-- PESQUISAR NOVAMENTE -->
+
+                <form
+                    class="search-box"
+                    action="/pesquisar"
+                    method="GET"
+                >
+
+                    <input
+                        type="text"
+                        name="busca"
+                        placeholder="Pesquisar novamente..."
+                        required
+                    >
+
+
+                    <button type="submit">
+                        Pesquisar
+                    </button>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             LISTA DE SEBOS
+        ====================================== -->
+
+        <section class="sebos-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        RESULTADOS
+                    </span>
+
+                    <h2>
+                        Sebos encontrados
+                    </h2>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="sebo-grid">
+
+
+                <!-- =================================
+                     LOOP DOS SEBOS
+                ================================== -->
+
+                {% for sebo in sebos %}
+
+
+                <article class="sebo-card">
+
+
+                    <!-- IMAGEM -->
+
+                    <div class="sebo-image">
+
+                        📚
+
+                    </div>
+
+
+
+                    <!-- INFORMAÇÕES -->
+
+                    <div class="sebo-info">
+
+
+                        <div class="rating">
+
+                            ⭐ {{ sebo.avaliacao }}
+
+                        </div>
+
+
+                        <h3>
+
+                            {{ sebo.nome }}
+
+                        </h3>
+
+
+                        <p class="location">
+
+                            📍 {{ sebo.local }}
+
+                        </p>
+
+
+                        <p>
+
+                            {{ sebo.descricao }}
+
+                        </p>
+
+
+
+                        <!-- =================================
+                             BOTÃO VER DETALHES
+                        ================================== -->
+
+                        <a
+                            href="/sebo/{{ sebo.id }}"
+                            class="details-btn"
+                        >
+
+                            Ver detalhes
+
+                        </a>
+
+
+                    </div>
+
+                </article>
+
+
+                {% endfor %}
+
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer>
+
+        <div class="copyright">
+
+            © 2026 Sebos Londrina —
+            Projeto acadêmico
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>

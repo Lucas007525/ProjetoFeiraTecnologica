@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>
+        {{ sebo.nome }} - Sebos Londrina
+    </title>
+
+    <link
+        rel="stylesheet"
+        href="../static/style.css"
+    >
+
+</head>
+
+
+<body>
+
+
+    <!-- =====================================
+         CABEÇALHO
+    ====================================== -->
+
+    <header class="header">
+
+        <div class="logo">
+
+            <span>📚</span>
+
+            <h1>
+                Sebos Londrina
+            </h1>
+
+        </div>
+
+
+        <nav class="navbar">
+
+            <a href="/">
+                Início
+            </a>
+
+            <a href="/#sebos">
+                Sebos
+            </a>
+
+            <a href="/#avaliacoes">
+                Avaliações
+            </a>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =====================================
+         CONTEÚDO
+    ====================================== -->
+
+    <main>
+
+
+        <!-- =====================================
+             INFORMAÇÕES PRINCIPAIS
+        ====================================== -->
+
+        <section class="sebo-detail-hero">
+
+            <div class="sebo-detail-image">
+
+                📚
+
+            </div>
+
+
+            <div class="sebo-detail-info">
+
+                <span class="hero-tag">
+                    SEBO DE LONDRINA
+                </span>
+
+
+                <h2>
+                    {{ sebo.nome }}
+                </h2>
+
+
+                <div class="detail-rating">
+
+                    ⭐ {{ sebo.avaliacao }}
+
+                    <span>
+                        / 5
+                    </span>
+
+                </div>
+
+
+                <p>
+                    {{ sebo.descricao }}
+                </p>
+
+
+                <p>
+                    📍 {{ sebo.local }}
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             INFORMAÇÕES DO SEBO
+        ====================================== -->
+
+        <section class="detail-section">
+
+
+            <div class="section-title">
+
+                <span>
+                    INFORMAÇÕES
+                </span>
+
+                <h2>
+                    Sobre o sebo
+                </h2>
+
+            </div>
+
+
+            <div class="info-grid">
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📍
+                    </div>
+
+                    <h3>
+                        Endereço
+                    </h3>
+
+                    <p>
+                        {{ sebo.endereco }}
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        📞
+                    </div>
+
+                    <h3>
+                        Telefone
+                    </h3>
+
+                    <p>
+                        {{ sebo.telefone }}
+                    </p>
+
+                </div>
+
+
+
+                <div class="info-card">
+
+                    <div class="info-icon">
+                        🕐
+                    </div>
+
+                    <h3>
+                        Horário
+                    </h3>
+
+                    <p>
+                        {{ sebo.horario }}
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             LIVROS
+        ====================================== -->
+
+        <section class="detail-section">
+
+
+            <div class="section-title">
+
+                <span>
+                    CATÁLOGO
+                </span>
+
+                <h2>
+                    Livros disponíveis
+                </h2>
+
+            </div>
+
+
+            <div class="book-grid">
+
+
+                <div class="book-card">
+
+                    <div class="book-icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        Dom Casmurro
+                    </h3>
+
+                    <p>
+                        Machado de Assis
+                    </p>
+
+                    <strong>
+                        R$ 20,00
+                    </strong>
+
+                </div>
+
+
+
+                <div class="book-card">
+
+                    <div class="book-icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        O Hobbit
+                    </h3>
+
+                    <p>
+                        J. R. R. Tolkien
+                    </p>
+
+                    <strong>
+                        R$ 35,00
+                    </strong>
+
+                </div>
+
+
+
+                <div class="book-card">
+
+                    <div class="book-icon">
+                        📖
+                    </div>
+
+                    <h3>
+                        O Pequeno Príncipe
+                    </h3>
+
+                    <p>
+                        Antoine de Saint-Exupéry
+                    </p>
+
+                    <strong>
+                        R$ 15,00
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             AVALIAÇÕES
+        ====================================== -->
+
+        <section class="detail-section">
+
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span>
+                        COMUNIDADE
+                    </span>
+
+                    <h2>
+                        Avaliações
+                    </h2>
+
+                </div>
+
+
+                <button class="details-btn">
+
+                    Avaliar este sebo
+
+                </button>
+
+            </div>
+
+
+
+            <div class="review-grid">
+
+
+                <div class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="avatar">
+                            L
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Lucas
+                            </h3>
+
+                            <span>
+                                ⭐⭐⭐⭐⭐
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Ótimo atendimento e
+                        bastante variedade de livros.
+                    </p>
+
+                </div>
+
+
+
+                <div class="review-card">
+
+                    <div class="review-top">
+
+                        <div class="avatar">
+                            A
+                        </div>
+
+
+                        <div>
+
+                            <h3>
+                                Ana
+                            </h3>
+
+                            <span>
+                                ⭐⭐⭐⭐
+                            </span>
+
+                        </div>
+
+                    </div>
+
+
+                    <p>
+                        Encontrei vários livros
+                        interessantes e o preço estava bom.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- VOLTAR -->
+
+        <section class="back-section">
+
+            <a href="/">
+                ← Voltar para a página inicial
+            </a>
+
+        </section>
+
+
+    </main>
+
+
+
+    <!-- =====================================
+         RODAPÉ
+    ====================================== -->
+
+    <footer>
+
+        <div class="copyright">
+
+            © 2026 Sebos Londrina —
+            Projeto acadêmico
+
+        </div>
+
+    </footer>
+
+
+</body>
+
+</html>
