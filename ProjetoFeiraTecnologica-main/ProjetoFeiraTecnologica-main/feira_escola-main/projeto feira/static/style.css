@@ -1,0 +1,1339 @@
+/* =========================================
+   RESET
+========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0b0f14;
+    color: #e8eaed;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+
+/* =========================================
+   CABEÇALHO
+========================================= */
+
+.header {
+    width: 100%;
+    min-height: 75px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    background-color: #10161f;
+
+    border-bottom: 1px solid #252d38;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo span {
+    font-size: 25px;
+}
+
+.logo h1 {
+    font-size: 20px;
+    color: #ffffff;
+}
+
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #aeb6c2;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #4d8ed3;
+}
+
+.user-area {
+    display: flex;
+    gap: 10px;
+}
+
+.login-btn,
+.register-btn {
+    padding: 9px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.login-btn {
+    background: transparent;
+    border: 1px solid #394452;
+    color: #ffffff;
+}
+
+.register-btn {
+    background: #245b98;
+    border: 1px solid #245b98;
+    color: #ffffff;
+}
+
+.login-btn:hover {
+    background: #1a222d;
+}
+
+.register-btn:hover {
+    background: #2e70b8;
+}
+
+
+/* =========================================
+   HERO
+========================================= */
+
+.hero {
+    min-height: 550px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0b0f14 0%,
+            #101923 60%,
+            #162334 100%
+        );
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-tag,
+.section-title span,
+.section-heading span,
+.cta span {
+    color: #4d8ed3;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.hero h2 {
+    margin: 18px 0;
+
+    font-size: clamp(40px, 6vw, 68px);
+
+    line-height: 1.05;
+
+    color: #ffffff;
+}
+
+.hero h2 strong {
+    display: block;
+    color: #4d8ed3;
+}
+
+.hero p {
+    max-width: 600px;
+
+    color: #aeb6c2;
+
+    font-size: 18px;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================================
+   PESQUISA
+========================================= */
+
+.search-box {
+    max-width: 650px;
+
+    display: flex;
+
+    background: #ffffff;
+
+    padding: 5px;
+
+    border-radius: 8px;
+}
+
+.search-box input {
+    flex: 1;
+
+    border: none;
+
+    outline: none;
+
+    padding: 15px;
+
+    font-size: 15px;
+
+    color: #111820;
+}
+
+.search-box button {
+    border: none;
+
+    border-radius: 5px;
+
+    padding: 0 25px;
+
+    background: #245b98;
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+.search-box button:hover {
+    background: #2e70b8;
+}
+
+
+/* =========================================
+   SEÇÕES
+========================================= */
+
+.categories,
+.sebos-section,
+.reviews-section {
+    padding: 90px 10%;
+}
+
+.categories,
+.reviews-section {
+    background: #10161f;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.section-title h2,
+.section-heading h2 {
+    margin-top: 8px;
+
+    font-size: 34px;
+
+    color: #ffffff;
+}
+
+
+/* =========================================
+   CATEGORIAS
+========================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.category-card {
+    padding: 30px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+
+    border-color: #315f91;
+}
+
+.category-icon {
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.category-card h3 {
+    color: #ffffff;
+    margin-bottom: 8px;
+}
+
+.category-card p {
+    color: #8993a1;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   SEBOS
+========================================= */
+
+.sebos-section {
+    background: #0b0f14;
+}
+
+.section-heading {
+    display: flex;
+
+    align-items: end;
+
+    justify-content: space-between;
+
+    margin-bottom: 40px;
+}
+
+.view-all {
+    padding: 10px 18px;
+
+    background: transparent;
+
+    border: 1px solid #394452;
+
+    border-radius: 6px;
+
+    color: #ffffff;
+}
+
+.view-all:hover {
+    background: #151c25;
+}
+
+.sebo-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.sebo-card {
+    overflow: hidden;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 10px;
+}
+
+.sebo-image {
+    height: 190px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #252d38;
+
+    color: #687586;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.sebo-info {
+    padding: 25px;
+}
+
+.rating {
+    color: #5c91c8;
+    margin-bottom: 8px;
+}
+
+.rating span {
+    color: #aeb6c2;
+    margin-left: 5px;
+}
+
+.sebo-info h3 {
+    color: #ffffff;
+    font-size: 21px;
+}
+
+.location {
+    color: #8993a1;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+.sebo-info > p:not(.location) {
+    color: #aeb6c2;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.details-btn {
+    display: inline-block;
+
+    width: 100%;
+
+    padding: 11px;
+
+    background: #1d4d80;
+
+    border: none;
+
+    border-radius: 5px;
+
+    color: #ffffff;
+
+    text-align: center;
+
+    transition: 0.3s;
+}
+
+.details-btn:hover {
+    background: #2869a8;
+}
+
+
+/* =========================================
+   AVALIAÇÕES
+========================================= */
+
+.review-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.review-card {
+    padding: 25px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 10px;
+}
+
+.review-top {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #245b98;
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+.review-top h3 {
+    font-size: 15px;
+    color: #ffffff;
+}
+
+.review-top span {
+    color: #5c91c8;
+}
+
+.review-card p {
+    color: #aeb6c2;
+    font-size: 14px;
+}
+
+
+/* =========================================
+   CTA
+========================================= */
+
+.cta {
+    margin: 80px 10%;
+
+    padding: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    background: #162334;
+
+    border: 1px solid #29425e;
+
+    border-radius: 12px;
+}
+
+.cta h2 {
+    max-width: 650px;
+
+    margin: 10px 0;
+
+    color: #ffffff;
+
+    font-size: 32px;
+}
+
+.cta p {
+    color: #aeb6c2;
+}
+
+.cta-button {
+    padding: 14px 25px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #2b68a7;
+
+    color: #ffffff;
+
+    font-weight: bold;
+}
+
+.cta-button:hover {
+    background: #367cbd;
+}
+
+
+/* =========================================
+   PÁGINAS DE LOGIN E CADASTRO
+========================================= */
+
+.auth-page {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 70px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b0f14,
+            #101923,
+            #162334
+        );
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 500px;
+
+    padding: 45px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.auth-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.auth-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0 auto 20px;
+
+    border-radius: 50%;
+
+    background: #245b98;
+
+    font-size: 28px;
+}
+
+.auth-header h2 {
+    margin: 10px 0;
+
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+.auth-header p {
+    color: #8993a1;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   FORMULÁRIOS
+========================================= */
+
+.auth-form,
+.evaluation-form {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 7px;
+}
+
+.form-group label {
+    color: #e8eaed;
+
+    font-size: 14px;
+
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    border: 1px solid #394452;
+
+    border-radius: 6px;
+
+    background: #0f141b;
+
+    color: #ffffff;
+
+    font-family: inherit;
+
+    font-size: 14px;
+
+    outline: none;
+
+    transition: 0.3s;
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 130px;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #4d8ed3;
+
+    box-shadow: 0 0 0 2px rgba(77, 142, 211, 0.12);
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #66717f;
+}
+
+.form-options {
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 15px;
+
+    font-size: 13px;
+}
+
+.form-options a {
+    color: #4d8ed3;
+}
+
+.remember {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    color: #aeb6c2;
+}
+
+.auth-button {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+
+    border-radius: 6px;
+
+    background: #245b98;
+
+    color: #ffffff;
+
+    font-weight: bold;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+}
+
+.auth-button:hover {
+    background: #2e70b8;
+}
+
+.auth-footer {
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #8993a1;
+
+    font-size: 14px;
+}
+
+.auth-footer a {
+    display: inline-block;
+
+    margin-top: 5px;
+
+    color: #4d8ed3;
+
+    font-weight: bold;
+}
+
+.back-link {
+    display: block;
+
+    margin-top: 25px;
+
+    text-align: center;
+
+    color: #8993a1;
+
+    font-size: 14px;
+
+    transition: 0.3s;
+}
+
+.back-link:hover {
+    color: #4d8ed3;
+}
+
+
+/* =========================================
+   PÁGINA DO SEBO
+========================================= */
+
+.sebo-detail-hero {
+    padding: 80px 10%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 50px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #0b0f14,
+            #162334
+        );
+}
+
+.sebo-detail-image {
+    width: 280px;
+    height: 280px;
+
+    flex-shrink: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: #252d38;
+
+    border: 1px solid #394452;
+
+    font-size: 80px;
+}
+
+.sebo-detail-info {
+    max-width: 700px;
+}
+
+.sebo-detail-info h2 {
+    margin: 12px 0;
+
+    color: #ffffff;
+
+    font-size: clamp(35px, 5vw, 55px);
+}
+
+.sebo-detail-info p {
+    color: #aeb6c2;
+
+    margin: 12px 0;
+}
+
+.detail-rating {
+    color: #5c91c8;
+
+    font-size: 20px;
+
+    font-weight: bold;
+}
+
+.detail-rating span {
+    color: #8993a1;
+
+    font-size: 14px;
+}
+
+.detail-section {
+    padding: 80px 10%;
+
+    background: #0b0f14;
+}
+
+.detail-section:nth-of-type(even) {
+    background: #10161f;
+}
+
+.info-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.info-card {
+    padding: 25px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 10px;
+}
+
+.info-icon {
+    font-size: 28px;
+
+    margin-bottom: 15px;
+}
+
+.info-card h3 {
+    color: #ffffff;
+
+    margin-bottom: 8px;
+}
+
+.info-card p {
+    color: #8993a1;
+
+    font-size: 14px;
+}
+
+.book-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.book-card {
+    padding: 25px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 10px;
+}
+
+.book-icon {
+    font-size: 35px;
+
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    color: #ffffff;
+
+    margin-bottom: 5px;
+}
+
+.book-card p {
+    color: #8993a1;
+
+    margin-bottom: 12px;
+
+    font-size: 14px;
+}
+
+.book-card strong {
+    color: #4d8ed3;
+}
+
+
+/* =========================================
+   PERFIL
+========================================= */
+
+.profile-page {
+    min-height: calc(100vh - 75px);
+
+    padding: 70px 10%;
+
+    background: #0b0f14;
+}
+
+.profile-header {
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    padding: 35px;
+
+    margin-bottom: 60px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 12px;
+}
+
+.profile-avatar {
+    width: 90px;
+    height: 90px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    background: #245b98;
+
+    color: #ffffff;
+
+    font-size: 35px;
+
+    font-weight: bold;
+}
+
+.profile-info h2 {
+    color: #ffffff;
+
+    font-size: 35px;
+
+    margin: 5px 0;
+}
+
+.profile-info p {
+    color: #8993a1;
+}
+
+.profile-section {
+    margin-bottom: 60px;
+}
+
+.profile-card {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+
+    padding: 30px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 10px;
+}
+
+.profile-field {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+}
+
+.profile-field span {
+    color: #8993a1;
+
+    font-size: 13px;
+}
+
+.profile-field strong {
+    color: #ffffff;
+
+    font-size: 16px;
+}
+
+.profile-actions {
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 15px;
+}
+
+
+/* =========================================
+   AVALIAÇÃO
+========================================= */
+
+.evaluation-page {
+    min-height: calc(100vh - 75px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    padding: 70px 5%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0b0f14,
+            #101923,
+            #162334
+        );
+}
+
+.evaluation-card {
+    width: 100%;
+
+    max-width: 650px;
+
+    padding: 45px;
+
+    background: #151c25;
+
+    border: 1px solid #252d38;
+
+    border-radius: 12px;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.35);
+}
+
+.evaluation-header {
+    text-align: center;
+
+    margin-bottom: 35px;
+}
+
+.evaluation-header h2 {
+    margin: 10px 0;
+
+    color: #ffffff;
+
+    font-size: 30px;
+}
+
+.evaluation-header p {
+    color: #8993a1;
+
+    font-size: 14px;
+}
+
+
+/* =========================================
+   RODAPÉ
+========================================= */
+
+footer {
+    background: #080b0f;
+
+    padding: 60px 10% 25px;
+
+    border-top: 1px solid #252d38;
+}
+
+.footer-content {
+    display: flex;
+
+    justify-content: space-between;
+
+    padding-bottom: 40px;
+}
+
+.footer-brand h2 {
+    color: #ffffff;
+}
+
+.footer-brand p {
+    margin-top: 10px;
+
+    color: #8993a1;
+}
+
+.footer-links {
+    display: flex;
+
+    gap: 80px;
+}
+
+.footer-links h3 {
+    margin-bottom: 15px;
+
+    color: #ffffff;
+
+    font-size: 15px;
+}
+
+.footer-links a {
+    display: block;
+
+    margin-bottom: 8px;
+
+    color: #8993a1;
+
+    font-size: 14px;
+}
+
+.footer-links a:hover {
+    color: #4d8ed3;
+}
+
+.copyright {
+    padding-top: 20px;
+
+    border-top: 1px solid #1c232d;
+
+    text-align: center;
+
+    color: #66717f;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   RESPONSIVIDADE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .navbar {
+        display: none;
+    }
+
+    .category-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .sebo-grid,
+    .review-grid,
+    .info-grid,
+    .book-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        flex-direction: column;
+
+        align-items: flex-start;
+
+        gap: 25px;
+    }
+
+    .sebo-detail-hero {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+    .profile-card {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .header {
+        padding: 0 5%;
+    }
+
+    .user-area .login-btn {
+        display: none;
+    }
+
+    .hero,
+    .categories,
+    .sebos-section,
+    .reviews-section,
+    .detail-section {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .hero h2 {
+        font-size: 42px;
+    }
+
+    .search-box {
+        flex-direction: column;
+
+        gap: 5px;
+    }
+
+    .search-box button {
+        padding: 13px;
+    }
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-heading {
+        align-items: flex-start;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .cta {
+        margin: 50px 5%;
+
+        padding: 35px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .auth-card,
+    .evaluation-card {
+        padding: 30px 22px;
+    }
+
+    .form-options {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .sebo-detail-hero {
+        padding: 60px 5%;
+    }
+
+    .sebo-detail-image {
+        width: 100%;
+        height: 220px;
+    }
+
+    .sebo-detail-info h2 {
+        font-size: 38px;
+    }
+
+    .profile-page {
+        padding: 50px 5%;
+    }
+
+    .profile-header {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .profile-info h2 {
+        font-size: 30px;
+    }
+}
