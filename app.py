@@ -82,8 +82,8 @@ def inicio():
 # o Flask chama a função pesquisar, que vai tratar o que foi pesquisado e mostrar os resultados.
 @app.route("/pesquisar")
 
-# Essa função recebe o que o usuário pesquisou através do request, guarda o termo na variável termo
-# e depois filtra a lista de sebos, mostrando só os resultados que combinam com a pesquisa.
+# Essa função recebe o que o usuário pesquisou através do request, guarda o termo na variável termo,
+# filtra a lista de sebos e agora também trata os casos de pesquisa vazia ou sem resultados.
 def pesquisar():
 
     termo = request.args.get(
@@ -91,28 +91,43 @@ def pesquisar():
         ""
     )
 
-    # DEGRAU 1 - FILTRO DE PESQUISA
-    # Antes, essa rota simplesmente devolvia a lista "sebos" inteira, sem
-    # considerar o termo pesquisado. Agora criamos a lista "resultados",
-    # que só recebe os sebos cujo nome OU local contenha o termo pesquisado.
-    #
-    # O .lower() nos dois lados da comparação serve para a busca não
-    # diferenciar maiúsculas de minúsculas (ex: "sebo" e "Sebo" encontram
-    # o mesmo resultado).
-    #
-    # OBS: se o termo pesquisado vier vazio (""), a condição é verdadeira
-    # para todos os sebos, então a busca em branco mostra a lista toda.
-    # Isso será tratado com mais cuidado no Degrau 2.
+    # FILTRO DE PESQUISA
+    # Criamos a lista "resultados", que só recebe os sebos cujo nome OU local
+    # contenha o termo pesquisado. O .lower() nos dois lados evita diferenciar
+    # maiúsculas de minúsculas.
     resultados = []
 
     for sebo in sebos:
         if termo.lower() in sebo["nome"].lower() or termo.lower() in sebo["local"].lower():
             resultados.append(sebo)
 
+    # TRATAMENTO DE PESQUISA VAZIA E SEM RESULTADO
+    # Criei a variável "mensagem", que guarda um aviso pro usuário
+    # dependendo da situação:
+
+    # 1) Se o campo de busca veio vazio -> pedimos pra ele digitar algo,
+    #    e "resultados" fica como lista vazia (não mostramos tudo à toa).
+    
+    # 2) Se ele digitou algo mas não encontramos nenhum sebo -> avisamos
+    #    que nada foi encontrado para aquele termo.
+    
+    # 3) Se encontramos resultados -> "mensagem" fica None, e o template
+    #    não precisa mostrar nenhum aviso.
+    mensagem = None
+
+    if termo.strip() == "":
+        resultados = []
+        mensagem = "Digite um termo para pesquisar."
+
+    elif len(resultados) == 0:
+        mensagem = f"Nenhum sebo encontrado para \"{termo}\"."
+
     return render_template(
         "resultado.html",
         termo=termo,
-        sebos=resultados
+        sebos=resultados,
+        mensagem=mensagem  # O template pode usar essa variável
+                            # pra exibir o aviso, ex: {% if mensagem %} ... {% endif %}
     )
 
 
